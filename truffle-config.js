@@ -9,13 +9,13 @@ module.exports = {
     development: {
       host: "127.0.0.1",
       port: 7545,
-      network_id: "*" // Match any network id
+      network_id: "*" 
     },
     kovan: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','), // Array of account private keys
-          `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
+          privateKeys.split(','), 
+          `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`
         )
       },
       gas: 5000000,
